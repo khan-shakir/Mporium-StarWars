@@ -1,0 +1,31 @@
+<div [ngBusy]="busy"></div>
+<h2>Planets</h2>
+<div *ngIf="planet.results">
+  <table class="table">
+  <thead class="table__head">
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Diameter</th>
+      <th>Climate</th>
+      <th>Gravity</th>
+      <th>Terrain</th>
+      <th>Population</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+
+   <tbody class="table__body">
+    <tr *ngFor="let planet of planet.results | slice:0:10; let i = index;">
+       <td>{{ i+1 }}</td>
+      <td>{{ planet.name }}</td>
+      <td>{{ planet.diameter }}</td>
+      <td>{{ planet.climate }}</td>
+      <td>{{ planet.gravity }}</td>
+      <td>{{ planet.terrain }}</td>
+      <td>{{ planet.population }}</td>
+      <td>{{ planet.url }}</td>  
+    </tr>
+  </tbody> 
+</table>
+</div>

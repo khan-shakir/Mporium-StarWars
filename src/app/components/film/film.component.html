@@ -1,0 +1,25 @@
+<div [ngBusy]="busy"></div>
+<h2>Films</h2>
+<div *ngIf="films.results">
+  <table class="table">
+    <thead class="table__head">
+      <tr>
+        <th>No</th>
+        <th>Title</th>
+        <th>Episode</th>
+        <th>Release Date</th>
+        <th>URL</th>
+      </tr>
+    </thead>
+
+    <tbody class="table__body">
+      <tr *ngFor="let film of films.results | slice:0:10; let i = index;">
+        <td>{{ i+1 }}</td>
+        <td>{{ film.title }}</td>
+        <td>{{ film.episode_id }}</td>
+        <td>{{ film.release_date }}</td>
+        <td>{{ film.url }}</td>  
+      </tr>
+    </tbody> 
+  </table>
+</div>

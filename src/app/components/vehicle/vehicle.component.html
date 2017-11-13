@@ -1,0 +1,31 @@
+<div [ngBusy]="busy"></div>
+<h2>Vehicals</h2>
+<div *ngIf="vehicle.results">
+  <table class="table">
+  <thead class="table__head">
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Manufacturer</th>
+      <th>Passengers</th>
+      <th>Consumables</th>
+      <th>Vehicle Class</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+
+   <tbody class="table__body">
+    <tr *ngFor="let vehicle of vehicle.results | slice:0:10; let i = index;">
+       <td>{{ i+1 }}</td>
+      <td>{{ vehicle.name }}</td>
+      <td>{{ vehicle.model }}</td>
+      <td>{{ vehicle.manufacturer }}</td>
+      <td>{{ vehicle.passengers }}</td>
+      <td>{{ vehicle.consumables }}</td>
+      <td>{{ vehicle.vehicle_class }}</td>
+      <td>{{ vehicle.url }}</td>  
+    </tr>
+  </tbody> 
+</table>
+</div>
