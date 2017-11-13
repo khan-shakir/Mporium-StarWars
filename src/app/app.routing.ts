@@ -9,7 +9,7 @@ import { StarshipComponent } from './components/starship/starship.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'films', pathMatch: 'full' },
+  { path: '', redirectTo: 'film', pathMatch: 'full' },
   { path: 'film',  component: FilmComponent},
   { path: 'planet', component: PlanetComponent },
   { path: 'people', component: PeopleComponent },
